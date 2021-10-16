@@ -1,5 +1,12 @@
 from declutterapp import app
-from flask import render_template
+from flask import config, render_template
+    
+from sawo import createTemplate, verifyToken
+import json
+
+user_entries=[("Why Web3 Matters?","hashnode.com","2021-10-18","2021-10-16",["Tech","Web3"]),
+            ("Make the Most Out of Your Next Migration Project","https://blog.tomaszgil.me/make-the-most-out-of-your-next-migration-project","2021-10-18","2021-10-16",["Tech","Migration"])]
+
 
 @app.route('/')
 def index():
@@ -15,7 +22,7 @@ def fill_details():
 
 @app.route('/home')
 def home():
-    return render_template("home.html")
+    return render_template("home.jinja2", entries=user_entries)
 
 @app.route('/entry')
 def entry():

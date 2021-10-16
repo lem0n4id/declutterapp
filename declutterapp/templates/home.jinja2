@@ -6,10 +6,16 @@
     </form>
     <button type ="button"> Add Entry </button><br>
     <h5> Database </h5><br>
-    Title : Why Web3 Matters?<br>
-    Domain : hashnode.com
-    <button>Remind on: Tommorrow</button><br>
-    Date Created : 16-10-2021<br>
-    Tags : Tech<br>
+
+    {% for entry in entries %} 
+    <p>Title : {{ entry[0] }} <button>Remind on: {{ entry[2] }} </button> <br>
+    Url : {{ entry[1] }} <br>
+    Date Created : {{ entry[3] }} <br>
+    Tags : {{ entry[4] }} 
     <button type ="button"> Click to Expand </button><br>
+    </p>
+    {% endfor %}
+    
+    
 {% endblock %} 
+

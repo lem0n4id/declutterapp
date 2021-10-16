@@ -1,5 +1,5 @@
 from bson.objectid import ObjectId
-from mongodb_base import get_database, generate_objectid
+from mongodb.mongodb_base import get_database, generate_objectid
 db = get_database()
 
 def get_count(collection_name: str):

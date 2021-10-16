@@ -1,5 +1,5 @@
 def get_database():
-    from creds import USERNAME, PASSWORD
+    from mongodb.creds import USERNAME, PASSWORD
 
     from pymongo import MongoClient
     import pymongo

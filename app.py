@@ -35,44 +35,44 @@ def settings():
     return render_template("settings.html")
 
 
-createTemplate("templates/partials", flask=True)
-load = ''
-loaded = 0
+# createTemplate("templates/partials", flask=True)
+# load = ''
+# loaded = 0
 
-def setPayload(payload):
-    global load
-    load = payload
-
-
-def setLoaded(reset=False):
-    global loaded
-    if reset:
-        loaded = 0
-    else:
-        loaded += 1
-
-@app.route("/")
-def index():
-    return render_template("index.html")
+# def setPayload(payload):
+#     global load
+#     load = payload
 
 
-@app.route("/login_page")
-def login_page():
-    setLoaded()
-    setPayload(load if loaded < 2 else '')
-    sawo = {
-        "auth_key": API_KEY,
-        "to": "login",
-        "identifier": "email"
-    }
-    return render_template("login.html", sawo=sawo, load=load)
+# def setLoaded(reset=False):
+#     global loaded
+#     if reset:
+#         loaded = 0
+#     else:
+#         loaded += 1
+
+# @app.route("/")
+# def index():
+#     return render_template("index.html")
 
 
-@app.route("/login", methods=["POST", "GET"])
-def login():
-    payload = json.loads(request.data)["payload"]
-    setLoaded(True)
-    setPayload(payload)
-    status = 200 if(verifyToken(payload)) else 404
-    return {"status": status}
+# @app.route("/login_page")
+# def login_page():
+#     setLoaded()
+#     setPayload(load if loaded < 2 else '')
+#     sawo = {
+#         "auth_key": API_KEY,
+#         "to": "login",
+#         "identifier": "email"
+#     }
+#     return render_template("login.html", sawo=sawo, load=load)
+
+
+# @app.route("/login", methods=["POST", "GET"])
+# def login():
+#     payload = json.loads(request.data)["payload"]
+#     setLoaded(True)
+#     setPayload(payload)
+#     status = 200 if(verifyToken(payload)) else 404
+#     return {"status": status}
 

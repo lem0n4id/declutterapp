@@ -1,5 +1,7 @@
-from declutterapp import app
-from flask import config, render_template
+from flask import render_template
+
+from flask import Flask
+app = Flask(__name__)
     
 from sawo import createTemplate, verifyToken
 import json

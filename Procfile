@@ -1,1 +1,1 @@
-web: gunicorn declutterapp:app
+web: gunicorn app:app

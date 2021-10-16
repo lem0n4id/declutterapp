@@ -1,0 +1,8 @@
+click==8.0.3
+colorama==0.4.4
+-e git+https://github.com/lem0n4id/declutterapp.git@c02c65c048719d27465a19c9588ac2e37564e726#egg=declutterapp
+Flask==2.0.2
+itsdangerous==2.0.1
+Jinja2==3.0.2
+MarkupSafe==2.0.1
+Werkzeug==2.0.2

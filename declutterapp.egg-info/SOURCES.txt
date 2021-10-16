@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+declutterapp/__init__.py
+declutterapp/views.py
+declutterapp.egg-info/PKG-INFO
+declutterapp.egg-info/SOURCES.txt
+declutterapp.egg-info/dependency_links.txt
+declutterapp.egg-info/requires.txt
+declutterapp.egg-info/top_level.txt

@@ -4,7 +4,6 @@ certifi==2021.10.8
 charset-normalizer==2.0.7
 click==8.0.3
 colorama==0.4.4
--e git+https://github.com/lem0n4id/declutterapp.git@a438a1c47c9daf9bd430f7b7a47f428d8c7b3f92#egg=declutterapp
 Flask==2.0.2
 gunicorn==20.1.0
 idna==3.3

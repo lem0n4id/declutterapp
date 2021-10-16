@@ -1,13 +1,18 @@
 {% extends "base.html"%}
 
-{% block head %} 
-
-<title>Hi there</title>
-
-{% endblock %}
-
 {% block body %} 
 
 <h1>Hello from extended index.html</h1>
+
+<b>pages:</b>
+<ol>
+    <li><a href="{{ url_for('index') }}">page 1 - index.html</a></li>
+    <li><a href="{{ url_for('hello') }}">page 2 - greet.html</a></li>
+    <li><a href="{{ url_for('fill_details') }}">page 3 - details.html</a></li>
+    <li><a href="{{ url_for('home') }}">page 4 - home.html</a></li>
+    <li><a href="{{ url_for('entry') }}">page 5 - add_entry.html</a></li>
+    <li><a href="{{ url_for('settings') }}">page 5 - settings.html</a></li>
+
+</ol>
 
 {% endblock %}

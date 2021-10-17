@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block body %} 
+<div class="data">
+  <div id="stat"><button type ="button"> Pending </button><br></div>
+  Date Created : 16-10-2021<br> 
+  <label for="name">Name</label>
+  <input type="text" id="name" name="name"><br>
+  <label for="name">Url</label>
+  <input type="text" id="url" name="url"><br>
+  <label for="name">Reminder</label>
+  <input type="date" id="remind" name="remind"><br>
+  Status 
+  <svg width="20" height="20">
+  <rect width="20" height="20" style="fill:#FF0000;stroke-width:3" /></svg> Unread <br>
+  Tags 
+  <span class="dot"></span>Tech 
+  <span class="dot"></span>Web3<br>
+  <button type ="button"> <a href="{{ url_for('home') }}">Go back</a> </button><br>
+</div>
+{% endblock %} 

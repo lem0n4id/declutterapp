@@ -1,0 +1,14 @@
+{% extends "base.html"%}
+{% block body%}
+
+        {% if load %}
+        <div class="text-center text-success">
+          <h3>Logged in successfully.. Payload Received!</h3>
+        </div>
+        <p>{{load}}</p>
+        {% else %}
+        <div class="col-12 d-flex justify-content-center">
+          {% include './partials/_sawo.html' %}
+        </div>
+        {% endif %}
+{% endblock %}

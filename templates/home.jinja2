@@ -1,0 +1,21 @@
+{% block body %} 
+<h1> DeClutter </h1>
+    <form id="form"> 
+      <input type="search" id="query" name="q" placeholder="Search...">
+      <button>Search</button>
+    </form>
+    <button type ="button"> Add Entry </button><br>
+    <h5> Database </h5><br>
+
+    {% for entry in entries %} 
+    <p>Title : {{ entry[0] }} <button>Remind on: {{ entry[2] }} </button> <br>
+    Url : {{ entry[1] }} <br>
+    Date Created : {{ entry[3] }} <br>
+    Tags : {{ entry[4] }} 
+    <button type ="button"> Click to Expand </button><br>
+    </p>
+    {% endfor %}
+    
+    
+{% endblock %} 
+

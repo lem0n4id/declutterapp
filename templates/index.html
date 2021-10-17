@@ -2,17 +2,18 @@
 
 {% block body %} 
 
-<h1>Hello from extended index.html</h1>
+<h1>Welcome to DeClutter</h1>
+Chcekout our <a href="">devpost</a> and <a href="">github</a>! <br>
 
+<a href="{{ url_for('login_page') }}">Login without password</a><br>
 <b>pages:</b>
 <ol>
     <li><a href="{{ url_for('index') }}">page 1 - index.html</a></li>
     <li><a href="{{ url_for('hello') }}">page 2 - greet.html</a></li>
-    <li><a href="{{ url_for('fill_details') }}">page 3 - details.html</a></li>
-    <li><a href="{{ url_for('home') }}">page 4 - home.html</a></li>
-    <li><a href="{{ url_for('entry') }}">page 5 - add_entry.html</a></li>
+    <li><a href="{{ url_for('home') }}">page 3 - home.html</a></li>
+    <li><a href="{{ url_for('entry') }}">page 4 - add_entry.html</a></li>
     <li><a href="{{ url_for('settings') }}">page 5 - settings.html</a></li>
-    <li><a href="{{ url_for('login_page') }}">page 5 - login.html</a></li>
+    <li><a href="{{ url_for('login_page') }}">page 6 - login.html</a></li>
 
 </ol>
 

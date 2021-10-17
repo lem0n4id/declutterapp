@@ -14,6 +14,7 @@ API_KEY = os.getenv("API_KEY")
 
 user_entries=[("Why Web3 Matters?","hashnode.com","2021-10-18","2021-10-16",["Tech","Web3"]),
             ("Make the Most Out of Your Next Migration Project","https://blog.tomaszgil.me/make-the-most-out-of-your-next-migration-project","2021-10-18","2021-10-16",["Tech","Migration"])]
+_name="lenin"
 
 createTemplate("templates/partials", flask=True)
 
@@ -40,7 +41,7 @@ def index():
 
 @app.route('/greet')
 def hello():
-    return render_template("greetings.html")
+    return render_template("greetings.html",name=_name)
 
 @app.route('/details')
 def fill_details():

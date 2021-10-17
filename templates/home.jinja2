@@ -1,10 +1,12 @@
+{% extends "base.html"%}
 {% block body %} 
 <h1> DeClutter </h1>
     <form id="form"> 
       <input type="search" id="query" name="q" placeholder="Search...">
       <button>Search</button>
     </form>
-    <button type ="button"> Add Entry </button><br>
+    <button type ="button"><a href="{{ url_for('entry') }}"> Add Entry </a> </button><br>
+    <button type ="button"><a href="{{ url_for('settings') }}"> Settings </a> </button><br>
     <h5> Database </h5><br>
 
     {% for entry in entries %} 
@@ -12,7 +14,7 @@
     Url : {{ entry[1] }} <br>
     Date Created : {{ entry[3] }} <br>
     Tags : {{ entry[4] }} 
-    <button type ="button"> Click to Expand </button><br>
+    <button type ="button" class="btn"> Click to Expand </button><br>
     </p>
     {% endfor %}
     

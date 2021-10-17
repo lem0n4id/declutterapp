@@ -2,9 +2,9 @@
 
 {% block body %} 
 
-Welcome to DeClutter! <br>You are on your way to declutter your life.<br> 
-Click on next to see how you can.<br>
-<button type ="button"> <a href="{{ url_for('hello') }}">Next</a> </button>
-
+<div class="intro" > 
+    Hey {{ name }}, Welcome to DeClutter! <br> You are on your way to declutter your life.<br> 
+    Click on next to get started.<br></div>
+    <div class="btn"> <a href="{{ url_for('home') }}">Next</a></button> </div>
 
 {% endblock %}
